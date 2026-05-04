@@ -5,10 +5,13 @@ header {
 }
 #feral-hidden {
   text-decoration: none;
+  color: inherit;
 }
 #rows-op-hidden {
   text-decoration: none;
+  color: inherit;
 }
 #finns-op-hidden {
-  text-decoration: none;
+  text-decoration: none; 
+  color: inherit;
 }
