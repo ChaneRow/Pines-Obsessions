@@ -81,6 +81,10 @@ ul a {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
+  :hover .secret-key,
+  :focus-within .secret-key {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 li:hover .secret-key,
