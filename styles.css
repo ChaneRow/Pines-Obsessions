@@ -1,20 +1,52 @@
 header {
-  background-image: src(https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   font-family: Palatino, serif;
   color: white;
   text-align: center;
   border: 2px solid white;
   border-radius: 4px;
-  width: 100%;  /* Make sure it takes full width */
+  width: 100%;
   margin: 0;
-  padding: 20px 0;  /* Add padding for spacing */
+  padding: 20px 0;
+  position: relative;
 }
+
+/* Overlay for text readability */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+header * {
+  position: relative;
+  z-index: 2;
+}
+
+body {
+  background-color: darkgreen;
+  text-align: center;
+  font-family: Palatino, serif;
+  margin: 0;
+  padding: 20px 0;
+}
+
 #feral-hidden,
 #rows-op-hidden,
 #finns-op-hidden {
   text-decoration: none;
   color: inherit;
 }
+
 ul {
   display: flex;
   flex-direction: column;
@@ -24,21 +56,30 @@ ul {
   list-style: none;
   text-align: center;
 }
+
 li {
   border: 2px solid white;
   border-radius: 5px;
   padding: 10px 20px;
   color: beige;
-  background-color: rgba(255, 255, 255, 0.1);  /* Add this for visibility */
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
 }
+
+li:hover,
+li:focus-within {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 ul a {
   text-decoration: none;
   color: inherit;
 }
+
 .secret-key {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s ease;
 }
 
 li:hover .secret-key,
@@ -47,82 +88,74 @@ li:focus-within .secret-key {
   pointer-events: auto;
 }
 
-body {
-  background-color: darkgreen;
-  text-align: center;
-  font-family: Palatino, serif;
-  border: 2px solid white;
-  border-radius: 4px;
-  width: 100%;  /* Make sure it takes full width */
-  margin: 0;
-  padding: 20px 0;
-}
 /* --- FINN'S SECRET POV STYLING --- */
 .finn-pov-theme {
-    background-color: #000;
-    color: #39ff14; /* Pure Neon Green */
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  background-color: #000;
+  color: #39ff14;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* The "Hacker" Flicker Effect */
 .static-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.15),
-        rgba(0, 0, 0, 0.15) 1px,
-        transparent 1px,
-        transparent 2px
-    );
-    pointer-events: none;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 100;
 }
 
 .terminal-window {
-    max-width: 850px;
-    margin: 5% auto;
-    padding: 40px;
-    border: 2px solid #39ff14;
-    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
-    background: rgba(0, 20, 0, 0.9);
+  max-width: 850px;
+  margin: 5% auto;
+  padding: 40px;
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+  background: rgba(0, 20, 0, 0.9);
 }
 
 .timestamp {
-    color: #15803d; /* Darker green for the timestamps */
-    font-weight: bold;
+  color: #15803d;
+  font-weight: bold;
 }
 
 .opinion-card {
-    border: 1px dashed #39ff14;
-    padding: 20px;
-    margin-top: 25px;
-    transition: 0.3s;
+  border: 1px dashed #39ff14;
+  padding: 20px;
+  margin-top: 25px;
+  transition: all 0.3s ease;
 }
 
 .opinion-card:hover {
-    background: rgba(57, 255, 20, 0.1);
-    transform: scale(1.02);
+  background: rgba(57, 255, 20, 0.1);
+  transform: scale(1.02);
 }
 
 .reboot-link {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #39ff14;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
+  display: inline-block;
+  margin-top: 40px;
+  padding: 10px 20px;
+  background-color: #39ff14;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-.reboot-link:hover {
-    background-color: #fff;
-    box-shadow: 0 0 30px #fff;
+.reboot-link:hover,
+.reboot-link:focus {
+  background-color: #fff;
+  box-shadow: 0 0 30px #fff;
 }
