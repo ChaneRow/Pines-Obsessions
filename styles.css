@@ -41,6 +41,17 @@ li {
   padding: 10px 20px;
   color: beige;
 }
+.secret-key {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+li:hover .secret-key,
+li:focus-within .secret-key {
+  opacity: 1;
+  pointer-events: auto;
+}
 /* --- FINN'S SECRET POV STYLING --- */
 .finn-pov-theme {
     background-color: #000;
