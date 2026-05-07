@@ -5,17 +5,14 @@ header {
   text-align: center;
   border: 2px solid white;
   border-radius: 4px;
+  width: 100%;  /* Make sure it takes full width */
+  margin: 0;
+  padding: 20px 0;  /* Add padding for spacing */
 }
-#feral-hidden {
-  text-decoration: none;
-  color: inherit;
-}
-#rows-op-hidden {
-  text-decoration: none;
-  color: inherit;
-}
+#feral-hidden,
+#rows-op-hidden,
 #finns-op-hidden {
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
 }
 ul {
