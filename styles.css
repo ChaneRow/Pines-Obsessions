@@ -100,7 +100,7 @@ p {
   line-height: 1.6;
   font-size: 1rem;
 }
-p.section {
+section, p {
   background-color: #f5f5dc;
   color: #1a1a1a;
   border: 2px solid #8b7355;
