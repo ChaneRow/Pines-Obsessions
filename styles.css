@@ -1,7 +1,10 @@
 header {
-  background-color: #654321;
+  background-color: darkgreen;
   font-family: Palitino, Arial;
   color: white;
+  text-align: center;
+  border: white 2px;
+  border-radius: 4px;
 }
 #feral-hidden {
   text-decoration: none;
@@ -23,6 +26,10 @@ ul {
   line-height: 1.8;
     list-style: none;
   text-align: center;
+  border: white 3px;
+  border-radius: 5px;
+  color: beige;
+  text-color: darkgrey;
 }
 /* --- FINN'S SECRET POV STYLING --- */
 .finn-pov-theme {
