@@ -31,6 +31,12 @@ ul a {
   text-decoration: none;
   color: inherit;
 }
+li {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: beige;
+}
 /* --- FINN'S SECRET POV STYLING --- */
 .finn-pov-theme {
     background-color: #000;
