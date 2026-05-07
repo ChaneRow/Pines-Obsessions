@@ -1,9 +1,9 @@
 header {
   background-color: darkgreen;
-  font-family: Palitino, Arial;
+  font-family: Palatino, serif;
   color: white;
   text-align: center;
-  border: white 2px;
+  border: 2px solid white;
   border-radius: 4px;
 }
 #feral-hidden {
@@ -24,12 +24,11 @@ ul {
   align-items: center;
   gap: 20px;
   line-height: 1.8;
-    list-style: none;
+  list-style: none;
   text-align: center;
-  border: white 3px;
+  border: 3px solid white;
   border-radius: 5px;
   color: beige;
-  text-color: darkgrey;
 }
 /* --- FINN'S SECRET POV STYLING --- */
 .finn-pov-theme {
